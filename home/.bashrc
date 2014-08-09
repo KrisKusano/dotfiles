@@ -255,3 +255,7 @@ source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 
 # homeshick autocompletion script
 source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
+
+# start a new shell in same working directory
+alias clone='cygstart --directory=$(pwd) /bin/mintty.exe -i /Cygwin-Terminal.ico'
+
