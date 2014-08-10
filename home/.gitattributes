@@ -1,0 +1,5 @@
+# control how --color-words option to diff chunks words
+*.m   diff=matlab
+*.tex   diff=tex
+*.py   diff=python
+*.html   diff=html
