@@ -259,3 +259,6 @@ source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
 # start a new shell in same working directory
 alias clone='cygstart --directory=$(pwd) /bin/mintty.exe -i /Cygwin-Terminal.ico'
 
+# node.js aliases
+alias npm="/cygdrive/c/Program\ Files\ \(x86\)/nodejs/npm.cmd"
+alias node="/cygdrive/c/Program\ Files\ \(x86\)/nodejs/node.exe"
