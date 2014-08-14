@@ -243,11 +243,17 @@ function settitle() {
   echo -ne "\e]2;$t\a\e]1;$t\a";
 }
 
+# determine host name
+hn="@${HOSTNAME}"
+if [[ $hn == "@SBES-PB00FV0Z" ]]; then
+  hn=""
+fi
+
 # bash shorten dir
 PROMPT_DIRTRIM=2
 PROMPT_COMMAND='settitle; git_branch; history -a;'
 #export PS1='\[\e${usercolor}\][\u]\[\e${gitcolor}\]${gitbranch}\[\e${cwdcolor}\][$PWD]\n\[\e${inputcolor}\] $ '
-export PS1='\[\e${gitcolor}\]${gitbranch}\[\e${cwdcolor}\][\w]\[\e${inputcolor}\] $ '
+export PS1='\[\e${usercolor}\][\u${hn}]\[\e${gitcolor}\]${gitbranch}\[\e${cwdcolor}\][\w]\[\e${inputcolor}\] $ '
 
 # homeshick bootstrap
 # from https://github.com/andsens/homeshick
