@@ -270,5 +270,5 @@ alias npm="/cygdrive/c/Program\ Files\ \(x86\)/nodejs/npm.cmd"
 alias node="/cygdrive/c/Program\ Files\ \(x86\)/nodejs/node.exe"
 
 # colorize less
-export LESS='-R'
+LESS="-r"; export LESS
 export LESSOPEN='|~/scripts/lessfilter %s'
