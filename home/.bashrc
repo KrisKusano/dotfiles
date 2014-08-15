@@ -268,3 +268,7 @@ alias clone='cygstart --directory=$(pwd) /bin/mintty.exe -i /Cygwin-Terminal.ico
 # node.js aliases
 alias npm="/cygdrive/c/Program\ Files\ \(x86\)/nodejs/npm.cmd"
 alias node="/cygdrive/c/Program\ Files\ \(x86\)/nodejs/node.exe"
+
+# colorize less
+export LESS='-R'
+export LESSOPEN='|~/scripts/lessfilter %s'
