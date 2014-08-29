@@ -205,8 +205,11 @@ alias ls='/bin/ls -hF --color=auto --show-control-chars'                 # class
 
 # ssh-pageant
 # https://github.com/cuviper/ssh-pageant
-eval $(/usr/bin/ssh-pageant -ra /tmp/.ssh-pageant)
-export GIT_SSH=/usr/bin/ssh
+command -v /usr/bin/ssh-pageant --version >/dev/null 2>&1
+if [[ $? == 0 ]]; then
+  eval $(/usr/bin/ssh-pageant -ra /tmp/.ssh-pageant)
+  export GIT_SSH=/usr/bin/ssh
+fi
 
 # Custom shell look
 # from: http://randomartifacts.blogspot.com/2012/10/a-proper-cygwin-environment.html
@@ -272,3 +275,7 @@ alias node="/cygdrive/c/Program\ Files\ \(x86\)/nodejs/node.exe"
 # colorize less
 LESS="-r"; export LESS
 export LESSOPEN='|~/scripts/lessfilter %s'
+
+# WinPython-64bit-2.7.6.3
+alias winpy="/cygdrive/c/WinPython-64bit-2.7.6.3/python-2.7.6.amd64/python.exe"
+alias winpyw="/cygdrive/c/WinPython-64bit-2.7.6.3/python-2.7.6.amd64/pythonw.exe"
