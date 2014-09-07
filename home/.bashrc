@@ -279,3 +279,10 @@ export LESSOPEN='|~/scripts/lessfilter %s'
 # WinPython-64bit-2.7.6.3
 alias winpy="/cygdrive/c/WinPython-64bit-2.7.6.3/python-2.7.6.amd64/python.exe"
 alias winpyw="/cygdrive/c/WinPython-64bit-2.7.6.3/python-2.7.6.amd64/pythonw.exe"
+
+# stupd cygwin git fix
+# git uses $XDG_CONFIG_HOME/git/config as the 2nd config file
+# i moved my C:\Users\kdkusano\.gitconfig file to this location
+# so that I could use it with homeshick. Cygwin git will not
+# recognize ~/.gitconfig for some stupid reason
+export XDG_CONFIG_HOME=/home/kdkusano
