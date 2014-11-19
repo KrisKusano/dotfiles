@@ -15,7 +15,7 @@
   lg = !"git lg1"
 
   # word difference
-  wdiff = diff --color-words
+  wdiff = diff --word-diff=color --unified=1
 [http]
 	sslCAInfo = /home/kdkusano/bin/ca-bundle-cib.crt
 [push]

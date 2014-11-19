@@ -24,3 +24,4 @@ Font=Consolas
 OpaqueWhenFocused=yes
 Transparency=medium
 CursorType=block
+ZoomShortcuts=no

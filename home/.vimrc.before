@@ -1,1 +1,15 @@
+" remap leader
 let mapleader = ","
+
+" make j and k go one line for wrapped lines
+nmap j gj
+nmap k gk
+
+" use ctrl-c as esc
+imap <C-c> <Esc>
+
+" exit from visual mode
+vnoremap v <Esc>
+
+" disable plugins - fugitive slows vim loading down
+call janus#disable_plugin('fugitive')
