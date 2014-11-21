@@ -20,3 +20,5 @@
 	sslCAInfo = /home/kdkusano/bin/ca-bundle-cib.crt
 [push]
 	default = simple
+[core]
+	editor = vim
