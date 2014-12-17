@@ -17,7 +17,10 @@
   # word difference
   wdiff = diff --word-diff=color --unified=1
 [http]
-	sslCAInfo = /home/kdkusano/bin/ca-bundle-cib.crt
+  # custom CA Info file so that VT cert auth is recognized
+  # no path expansion allowed here - added GIT_SSL_CAINFO
+  # env var instead
+  # sslCAInfo = /home/kdkusano/bin/ca-bundle-cib.crt
 [push]
 	default = simple
 [core]
