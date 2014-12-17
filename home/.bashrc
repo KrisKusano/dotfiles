@@ -165,8 +165,7 @@ fi
 # bash shorten dir
 PROMPT_DIRTRIM=2
 PROMPT_COMMAND='settitle; git_branch; history -a;'
-#export PS1='\[\e${usercolor}\][\u]\[\e${gitcolor}\]${gitbranch}\[\e${cwdcolor}\][$PWD]\n\[\e${inputcolor}\] $ '
-export PS1='\[\e${usercolor}\][\u${hn}]\[\e${gitcolor}\]${gitbranch}\[\e${cwdcolor}\][\w]\[\e${inputcolor}\] $ '
+export PS1='\[\e${usercolor}\][\u${hn}]\[\e${gitcolor}\]${gitbranch}\[\e${cwdcolor}\][\w] \[\e${usercolor}\]\$\[\e[m\] \[\e${inputcolor}\]'
 
 # homeshick bootstrap
 # from https://github.com/andsens/homeshick
