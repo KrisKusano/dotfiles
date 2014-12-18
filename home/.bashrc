@@ -113,14 +113,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# ssh-pageant
-# https://github.com/cuviper/ssh-pageant
-command -v /usr/bin/ssh-pageant --version >/dev/null 2>&1
-if [[ $? == 0 ]]; then
-  eval $(/usr/bin/ssh-pageant -ra /tmp/.ssh-pageant)
-  export GIT_SSH=/usr/bin/ssh
-fi
-
 # Custom shell look
 # from: http://randomartifacts.blogspot.com/2012/10/a-proper-cygwin-environment.html
 

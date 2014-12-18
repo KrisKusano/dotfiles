@@ -43,11 +43,20 @@ fi
 #   INFOPATH="${HOME}/info:${INFOPATH}"
 # fi
 
-# start ssh agent
-# from http://blog.killtheradio.net/how-tos/ssh-agent-on-cygwin/
-#SSHAGENT=/usr/bin/ssh-agent
-#SSHAGENTARGS="-s"
-#if [ -z "$SSH_AUTH_SOCK" -a -x "$SSHAGENT" ]; then
-  #eval `$SSHAGENT $SSHAGENTARGS`
-  #trap "kill $SSH_AGENT_PID" 0
-#fi
+
+command -v /usr/bin/ssh-pageant --version >/dev/null 2>&1
+if [[ $? == 0 ]]; then
+  # ssh-pageant (cygwin)
+  # https://github.com/cuviper/ssh-pageant
+  eval $(/usr/bin/ssh-pageant -ra /tmp/.ssh-pageant)
+  export GIT_SSH=/usr/bin/ssh
+else
+  # start ssh agent
+  # from http://blog.killtheradio.net/how-tos/ssh-agent-on-cygwin/
+  SSHAGENT=/usr/bin/ssh-agent
+  SSHAGENTARGS="-s"
+  if [ -z "$SSH_AUTH_SOCK" -a -x "$SSHAGENT" ]; then
+    eval `$SSHAGENT $SSHAGENTARGS`
+    trap "kill $SSH_AGENT_PID" 0
+  fi
+fi
