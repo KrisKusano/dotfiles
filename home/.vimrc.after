@@ -20,8 +20,8 @@ filetype indent on
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
 
-" colors
-color vividchalk
+" colors - i like the console defaults
+" color vividchalk
 
 " force m-files from MATLAB to have 4 tabs
 au FileType matlab setlocal softtabstop=4 tabstop=4 shiftwidth=4

@@ -24,4 +24,5 @@
 [push]
 	default = simple
 [core]
-	editor = vim
+  editor = vim
+  pager = less -r
